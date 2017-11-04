@@ -1,0 +1,11 @@
+sqlite3-dbf (2011.01.24) unstable; urgency=low
+
+  * Add LICENSE file (GPLv3)
+
+ -- Alexey Pechnikov <pechnikov@mobigroup.ru>  Mon, 24 Jan 2011 15:45:27 +0300
+
+sqlite3-dbf (2010.08.16) unstable; urgency=low
+
+  * Initial release.
+
+ -- Alexey Pechnikov <pechnikov@mobigroup.ru>  Fri, 06 Aug 2010 03:29:39 +0400

@@ -1,0 +1,18 @@
+Source: sqlite3-dbf
+Section: database
+Priority: optional
+Maintainer: Alexey Pechnikov <pechnikov@mobigroup.ru>
+Build-Depends: cdbs (>= 0.4.15), debhelper (>= 4.1.16)
+Standards-Version: 3.8.4
+
+Package: sqlite3-dbf
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Recommends: sqlite3
+Description: converter of XBase / FoxPro tables to SQLite
+ SQLiteDBF converts XBase databases, particularly FoxPro tables with  memo files,
+ into a SQL dump. It has no dependencies other than standard Unix libraries.
+ .
+ sqlite3-dbf is designed to be incredibly fast and as efficient as possible.
+ .
+ This use codebase of the PgDBF project (http://pgdbf.sourceforge.net/).
