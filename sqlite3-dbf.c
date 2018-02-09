@@ -126,7 +126,7 @@ int main(int argc, char **argv)
 	printf("  -h  print this message and exit\n");
 	printf("  -m  the name of the associated memo file (if necessary)\n");
 	printf("\n");
-	printf("%s is copyright 2010 Alexey Pechnikov\n");
+	printf("SQLite3-DBF is copyright 2010 Alexey Pechnikov\n");
 	printf("Utility based on source code of PgDBF (c) 2009 Daycos\n");
 	printf("License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>\n");
 	printf("This is free software: you are free to change and redistribute it.\n");
@@ -493,7 +493,7 @@ int main(int argc, char **argv)
 		    break;
 		case 'Y':
 		    /* Currency */
-		    t = outputbuffer + sprintf(outputbuffer, "%05jd", slittleint64_t(bufoffset));
+		    t = outputbuffer + sprintf(outputbuffer, "%05jd", (intmax_t)slittleint64_t(bufoffset));
 		    *(t + 1) = '\0';
 		    *(t) = *(t - 1);
 		    *(t - 1) = *(t - 2);

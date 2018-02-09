@@ -6,6 +6,10 @@ Converter of XBase/FoxPro tables to SQLite
 SQLiteDBF converts XBase databases, particularly FoxPro tables with memo files, into a SQL dump. It has no dependencies other than standard Unix libraries.
 This use codebase of the PgDBF project (http://pgdbf.sourceforge.net/) which designed to be incredibly fast and as efficient as possible.
 
+# Compilation
+
+```gcc sqlite3-dbf.c -o sqlite3-dbf```
+
 # Usage
 
 When terminal encoding is same to dBase file encoding the usage is very simple:
