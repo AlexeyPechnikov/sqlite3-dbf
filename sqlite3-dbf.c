@@ -325,10 +325,7 @@ int main(int argc, char **argv)
 	    }
 	    break;
 	case 'N':
-	    /* Was a numeric at one point, but for our purposes a text field
-	     * is better because there isn't a perfect overlap between
-	     * FoxPro and PostgreSQL numeric types */
-	    printf("TEXT");
+            printf("NUMERIC(%d, %d)", fields[fieldnum].length, fields[fieldnum].decimals);
 	    break;
 	case 'T':
 	    printf("TIMESTAMP");
@@ -395,7 +392,7 @@ int main(int argc, char **argv)
 		case 'D':
 		    /* Datestamps */
 		    if(bufoffset[0] == ' ' || bufoffset[0] == '\0') {
-			printf("'\\N'");
+			printf("NULL");
 		    } else {
 			s = outputbuffer;
 			*s++ = bufoffset[0];
@@ -472,9 +469,9 @@ int main(int argc, char **argv)
 			s++;
 		    }
 		    if(*s == '\0') {
-			printf("'\\N'");
+			printf("NULL");
 		    } else {
-			printf("'%s'", s);
+			printf("%s", s);
 		    }
 		    break;
 		case 'T':
@@ -482,7 +479,7 @@ int main(int argc, char **argv)
 		    juliandays = slittleint32_t(bufoffset);
 		    seconds = (slittleint32_t(bufoffset + 4) + 1) / 1000;
 		    if(!(juliandays || seconds)) {
-			printf("'\\N'");
+			printf("NULL");
 		    } else {
 			hours = seconds / 3600;
 			seconds -= hours * 3600;
