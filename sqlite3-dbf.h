@@ -144,6 +144,9 @@ static void safeprintbuf(const char *buf, const size_t inputsize)
     t = targetbuf;
     for(s = buf; s <= lastchar; s++) {
 	switch(*s) {
+	case '\'':
+	    *t++ = '\'';
+	    *t++ = '\'';
 	case '\\':
 	    *t++ = '\\';
 	    *t++ = '\\';
